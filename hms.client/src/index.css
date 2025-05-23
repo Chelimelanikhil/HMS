@@ -578,10 +578,6 @@ body {
     }
 
 
-
-
-
-
     /* Stats Cards Styles */
     .stats-grid {
         display: grid;
@@ -590,11 +586,11 @@ body {
         margin-bottom: 32px;
     }
 
-    @media (max-width: 1200px) {
+/*    @media (max-width: 1200px) {
         .stats-grid {
             grid-template-columns: repeat(2, 1fr);
         }
-    }
+    }*/
 
     @media (max-width: 768px) {
         .stats-grid {

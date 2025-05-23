@@ -76,6 +76,7 @@
 //        </>
 //    );
 //}
+
 import StatCard from '../components/StatCard';
 import ChartCard from '../components/ChartCard';
 import ActivitiesTable from '../components/ActivitiesTable';
