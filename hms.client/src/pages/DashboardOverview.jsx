@@ -105,9 +105,7 @@ export default function DashboardOverview() {
             <h2 className="mb-4">Dashboard Overview</h2>
 
             <div className="stats-grid">
-
                 <StatCard />
-
             </div>
 
             <div className="row">
