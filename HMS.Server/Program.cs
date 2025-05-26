@@ -1,6 +1,20 @@
+using HMS.Server.DAO;
+using HMS.Server.DTO;
+using HMS.Server.Helpers;
+using HMS.Server.Interfaces;
+using HMS.Server.Manager;
+
 var builder = WebApplication.CreateBuilder(args);
 
+ConnectionString connectionString = new ConnectionString();
+builder.Configuration.GetSection("ConnectionStrings").Bind(connectionString);
+
+
 // Add services to the container.
+builder.Services.AddScoped<IDoctorService, DoctorsMgr>();
+builder.Services.AddScoped<DoctorsDAO>();
+builder.Services.AddSingleton<BlobService>();
+
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
