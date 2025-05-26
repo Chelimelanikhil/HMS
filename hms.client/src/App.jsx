@@ -2,10 +2,13 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Sidebar from '../src/components/Sidebar';
 import Header from '../src/components/Header';
 import DashboardOverview from '../src/pages/DashboardOverview';
-import Analytics from '../src/pages/Analytics';
-import Teams from '../src/pages/Teams';
-import Documents from '../src/pages/Documents';
+import Patients from '../src/pages/Patients';
+import Doctors from '../src/pages/Doctors';
+import Appointments from '../src/pages/Appointments';
 import SettingsPage from '../src/pages/SettingsPage';
+import Payments from '../src/pages/Payments';
+import AuthPages from '../src/pages/Login';
+
 
 export default function Dashboard() {
     return (
@@ -17,9 +20,11 @@ export default function Dashboard() {
                     <main className="dashboard-content">
                         <Routes>
                             <Route path="/" element={<DashboardOverview />} />
-                            <Route path="/analytics" element={<Analytics />} />
-                            <Route path="/teams" element={<Teams />} />
-                            <Route path="/documents" element={<Documents />} />
+                            <Route path="/login" element={<AuthPages />} />
+                            <Route path="/patients" element={<Patients />} />
+                            <Route path="/doctors" element={<Doctors />} />
+                            <Route path="/appointments" element={<Appointments />} />
+                            <Route path="/payments" element={<Payments />} />
                             <Route path="/settings" element={<SettingsPage />} />
                         </Routes>
                     </main>

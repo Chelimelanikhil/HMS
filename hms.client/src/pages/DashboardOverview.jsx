@@ -76,6 +76,7 @@
 //        </>
 //    );
 //}
+
 import StatCard from '../components/StatCard';
 import ChartCard from '../components/ChartCard';
 import ActivitiesTable from '../components/ActivitiesTable';
@@ -104,9 +105,7 @@ export default function DashboardOverview() {
             <h2 className="mb-4">Dashboard Overview</h2>
 
             <div className="stats-grid">
-
                 <StatCard />
-
             </div>
 
             <div className="row">

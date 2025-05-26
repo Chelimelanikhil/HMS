@@ -1,16 +1,25 @@
 ﻿import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { Home, BarChart, Users, FileText, Settings, LogOut, PieChart } from 'lucide-react';
+import {
+    Home,
+    BarChart2,
+    User,
+    Users,
+    Calendar,
+    CreditCard,
+    Settings,
+    LogOut, PieChart
+} from 'lucide-react';
 import * as Tooltip from '@radix-ui/react-tooltip';
 
 const navItems = [
     { name: 'Dashboard', icon: <Home size={20} />, path: '/' },
-    { name: 'Analytics', icon: <BarChart size={20} />, path: '/analytics' },
-    { name: 'Teams', icon: <Users size={20} />, path: '/teams' },
-    { name: 'Documents', icon: <FileText size={20} />, path: '/documents' },
+    { name: 'Patients', icon: <User size={20} />, path: '/patients' },
+    { name: 'Doctors', icon: <Users size={20} />, path: '/doctors' },
+    { name: 'Appointments', icon: <Calendar size={20} />, path: '/appointments' },
+    { name: 'Payments', icon: <CreditCard size={20} />, path: '/payments' },
     { name: 'Settings', icon: <Settings size={20} />, path: '/settings' }
 ];
-
 export default function Sidebar() {
     const location = useLocation();
     const navigate = useNavigate();
